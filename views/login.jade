@@ -1,0 +1,17 @@
+extends layout
+block mainContent
+  #display
+    #login
+      form(method='post')
+        p
+          | Enter your name + password if you want to be a NinjaMiner.
+        div#login_div
+          input(type='text', name='username', placeholder="Username")
+          br
+          br
+          input(type='password', name='password', placeholder="Password")
+          br
+          br
+          input(type='submit', value='Log In')
+
+  

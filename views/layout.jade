@@ -1,0 +1,48 @@
+doctype 5
+html
+	head
+		title= title
+		link(rel="shortcut icon", href="/images/theninjastar.png")
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		#nav
+			ol
+				a(href="/")
+					li#li_logo
+						img(src='/images/ninjastar.png', height=60, width=220)
+				a(href="/user/#{username}")
+					li Profile
+				a(href="/quotes")
+					li Quotes
+				a(href="/login") 
+					li Sign Up
+				li#search 
+					form(method="get") 
+						input(type="text", id="searchBox", name="searchBox", placeholder="Search Quotes")
+				include userbar
+				
+				
+					
+		#wrapper
+
+			#container
+				br
+				#main_content
+					block mainContent
+					
+				#side_content
+					#sidebar
+						#profile_update
+							h1 Profile Update
+								p
+									| : No profile to update.
+						#recent_items
+							h1 Recent Quotes
+								p
+									| : No recent Quotes.	
+				br		    
+		#footer
+			div Copyright &copy; NinjaMine #{+new Date().getFullYear()} 
+			a(href='/page?name=about') About 
+			| |  
+			a(href='/page?name=contact') Contact Us
