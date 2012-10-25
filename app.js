@@ -2,7 +2,17 @@ username = "Guest";
 /**
  * Module dependencies.
  */
+/**MongoHQ**/
+var Mongolian = require('mongolian');
+var server, db;
 
+if(process.env.MONGOHQ_URL) {
+  db = new Mongolian(process.env.MONGOHQ_URL);
+} else {
+  server = new Mongolian;
+  db = server.db('ninjamineDB');
+}
+/***********/
 var express = require('express')
 var ninja = require('./routes/ninja')
   , user = require('./routes/user')
