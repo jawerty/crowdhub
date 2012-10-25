@@ -1,4 +1,4 @@
-username = 0;
+username = "Guest";
 /**
  * Module dependencies.
  */
