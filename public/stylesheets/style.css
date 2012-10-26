@@ -277,6 +277,8 @@ margin: 0px;
   
   vertical-align:middle;
   display:table-cell; }
+#userbar li:hover{
+  background:#F1F1F1;  }
 #footer {
   margin: 100px;
   text-align: center;
