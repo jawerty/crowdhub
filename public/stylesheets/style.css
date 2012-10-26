@@ -87,7 +87,7 @@ p {
   background: #E7E7E7;/**url('/images/blue_text_lines.png');**/
   border-left: 1px solid #D7D7D7;
   border-right: 1px solid #D7D7D7;
-    border-bottom: 1px solid #D7D7D7;
+    border-bottom: 2px solid #C7C7C7;
 	border-top: 1px solid #D7D7D7;
   width: 100%;
   display: block;
