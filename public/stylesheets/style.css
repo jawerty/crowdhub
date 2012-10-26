@@ -84,11 +84,11 @@ p {
 #nav2 ol {
   padding: 0px;
   border-radius: 1px;
-  background: #F1F1F1;/**url('/images/blue_text_lines.png');**/
-  border-left: 1px solid #E7E7E7;
-  border-right: 1px solid #E7E7E7;
-    border-bottom: 1px solid #E7E7E7;
-	border-top: 1px solid #E7E7E7;
+  background: #E7E7E7;/**url('/images/blue_text_lines.png');**/
+  border-left: 1px solid #D7D7D7;
+  border-right: 1px solid #D7D7D7;
+    border-bottom: 1px solid #D7D7D7;
+	border-top: 1px solid #D7D7D7;
   width: 100%;
   display: block;
   top: 0%;
@@ -263,6 +263,7 @@ margin: 10px;
 /**/
 #userbar {
 float:right;
+margin-right: 10px;
  }
  #userbar li{
 margin: 0px;
