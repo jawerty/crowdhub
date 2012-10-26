@@ -222,6 +222,9 @@ margin: 10px;
 #userbar {
   margin-bottom: 10px;
  }
+ #userbar li{
+ font-size: 10px;
+ }
 #footer {
   margin: 100px;
   text-align: center;
