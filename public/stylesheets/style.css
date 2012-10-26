@@ -79,7 +79,7 @@ p {
 }
 #nav2 {
   width: 100%;
-  height: 100px;
+  height: 40px;
 }
 #nav2 ol {
   padding: 0px;
@@ -89,6 +89,7 @@ p {
   border-right: 1px solid #D7D7D7;
     border-bottom: 2px solid #C7C7C7;
   width: 100%;
+  height: 100%;
   display: block;
   top: 0%;
 }
