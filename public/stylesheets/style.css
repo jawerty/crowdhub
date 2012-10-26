@@ -90,6 +90,10 @@ p {
 #li_logo:hover{
     background-color: #606060;
 }
+#li_logo a:hover{
+    background-color: #606060;
+
+}
 #nav a {
   text-decoration:none;
     vertical-align:middle;
