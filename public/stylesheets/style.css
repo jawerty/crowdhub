@@ -77,10 +77,14 @@ p {
   display:table-cell;
 
 }
-#nav a:hover{
+#nav li:hover{
   background-color:#69D2E7;
 
 }
+#nav a:hover{
+
+}
+
 #li_logo{
 
 }
