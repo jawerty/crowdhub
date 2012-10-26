@@ -1,4 +1,4 @@
-
+  
 // handler for homepage
 exports.home = function(req, res) {
     // if user is not logged in, ask them to login
@@ -26,7 +26,7 @@ var quotes = {
 exports.quotes = function(req, res) {
     // don't let nameless people view the items, redirect them back to the homepage
     if (typeof req.session.username == 'undefined') res.redirect('/');
-    else res.render('quotes', { title: 'NinjaMine - Quotes', username: req.session.username, quotes:quotes });
+    else res.render('quotes', { title: 'NinjaMine | Quotes', username: req.session.username, quotes:quotes });
 };
 
 // handler for displaying individual items
@@ -36,7 +36,7 @@ exports.quote = function(req, res) {
     else {
         var author = quotes[req.params.id].author;
         var quote = quotes[req.params.id].quote;
-        res.render('quote', { title: 'NinjaMine - ' + author, username: req.session.username, author:author, quote:quote });
+        res.render('quote', { title: 'NinjaMine | ' + author, username: req.session.username, author:author, quote:quote });
     }
 };
 // handler for showing simple pages
@@ -61,7 +61,12 @@ exports.login_post_handler = function(req, res) {
 };
 
 exports.profile = function(req, res) {
-	res.render('profile', {title: 'NinjaMine | ' + req.session.username + '\'s Profile', username: req.session.username})
+	if (typeof req.session.username == 'undefined') res.redirect('/');
+    else {
+        var author = quotes[req.params.id].author;
+        var quote = quotes[req.params.id].quote;
+        res.render('profile', { title: 'NinjaMine | ' + author, username: req.session.username, author:author, quote:quote });
+    }
 }
 exports.profile_post_handler = function(req, res) {
 	res.redirect('/user/:id');
