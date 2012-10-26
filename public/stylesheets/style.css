@@ -84,11 +84,11 @@ p {
 
 
 #li_logo{
-	    background-color: #505050;
+	    background-color: none;
 
 }
 #li_logo:hover{
-    background: #606060;
+    background: none;
 }
 #nav a {
   text-decoration:none;
