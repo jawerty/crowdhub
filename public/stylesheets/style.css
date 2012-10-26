@@ -8,14 +8,17 @@
   font-size: 100%;
   vertical-align: baseline;
 }
-body {
-  padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
- 	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E0E4CC 100%);
+html {
+background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E0E4CC 100%);
     background-image: -moz-linear-gradient(top, #FFFFFF 0%, #E0E4CC 100%);
     background-image: -o-linear-gradient(top, #FFFFFF 0%, #E0E4CC 100%);
     background-image: -ms-linear-gradient(top, #FFFFFF 0%, #E0E4CC 100%);
     background-image: linear-gradient(top, #FFFFFF 0%, #E0E4CC 100%);
+}
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ 	
 }
 p {
   font-family: sans-serif;
