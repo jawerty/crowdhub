@@ -84,11 +84,11 @@ p {
 #nav2 ol {
   padding: 0px;
   border-radius: 1px;
-  background: #E8E8E8;/**url('/images/blue_text_lines.png');**/
+  background: #F1F1F1;/**url('/images/blue_text_lines.png');**/
   border-left: 1px solid #202020;
   border-right: 1px solid #202020;
-    border-bottom: 1px solid #202020;
-
+    border-bottom: 1px solid #606060;
+	border-top: 1px solid #606060;
   width: 100%;
   display: block;
   top: 0%;
@@ -120,7 +120,9 @@ p {
 }
 #nav2 a {
 text-decoration: none;
+color: #69D2E7;
 }
+
 
 
 #li_logo{
