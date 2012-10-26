@@ -101,7 +101,7 @@ p {
   
   border-radius: 1px;
   font-size:20px;
-  color: #fff;
+  color: #69D2E7;
   text-align: center;
   padding: 10px; 
   font-family:verdana;
@@ -113,6 +113,13 @@ p {
 #nav li:hover{
   background-color:#69D2E7;
 
+}
+#nav2 li:hover{
+  background-color:#606060;
+
+}
+#nav2 a {
+text-decoration: none;
 }
 
 
