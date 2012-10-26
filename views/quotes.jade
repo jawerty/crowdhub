@@ -7,5 +7,5 @@ block mainContent
 				- var quote = quotes[id]
 				div
 					halfQuote = quote.quote.substring(0,15) + '...'
-					a(href='/user/#{id}') #{quote.author} - #{halfQuote}
+					a(href='/quote/#{id}') #{quote.author} - #{halfQuote}
         
