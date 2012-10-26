@@ -262,6 +262,7 @@ margin: 10px;
 }
 /**/
 #userbar {
+float:right;
  }
  #userbar li{
 margin: 0px;
