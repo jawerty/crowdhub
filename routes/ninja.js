@@ -68,6 +68,6 @@ exports.profile = function(req, res) {
         res.render('profile', { title: 'NinjaMine | ' + author, username: req.session.username, author:author, quote:quote });
     }
 }
-exports.profile_post_handler = function(req, res) {
-	res.redirect('/user/:id');
-}
+//exports.profile_post_handler = function(req, res) {
+//	res.redirect('/user/:id');
+//}
