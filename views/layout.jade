@@ -8,17 +8,13 @@ html
 		#nav
 			ol
 				li#li_logo
-					a(href="/")
-						img(src='/images/ninjastar.png', height=60, width=220)
+					a(href="/") img(src='/images/ninjastar.png', height=60, width=220)
 				li
-					a(href="/user/#{username}")
-						Profile
+					a(href="/user/#{username}") Profile
 				li
-					a(href="/quotes")
-						Quotes
+					a(href="/quotes") Quotes
 				li	
-					a(href="/signup") 
-						Sign Up
+					a(href="/signup") Sign Up
 				li#search 
 					form(method="get") 
 						input(type="text", id="searchBox", name="searchBox", placeholder="Search Quotes")
