@@ -88,7 +88,7 @@ p {
 
 }
 #li_logo:hover{
-    background-color: #606060;
+    background: #606060;
 }
 #nav a {
   text-decoration:none;
@@ -112,7 +112,7 @@ p {
 right:0%;
 }
 #search:hover {
-    background-color: #505050;
+    background: #606060;
 }
 #searchBox {
 color: #777;
