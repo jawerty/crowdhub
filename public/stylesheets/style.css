@@ -77,6 +77,39 @@ p {
   display:table-cell;
 
 }
+#nav2 {
+  width: 100%;
+ 
+}
+#nav2 ol {
+  padding: 0px;
+  border-radius: 1px;
+  background: #E8E8E8;/**url('/images/blue_text_lines.png');**/
+  border-left: 1px solid #202020;
+  border-right: 1px solid #202020;
+    border-bottom: 1px solid #202020;
+
+  width: 100%;
+  display: block;
+  top: 0%;
+}
+#nav2 li {
+
+  margin: 0px;
+  margin-right: 2px;
+
+  
+  border-radius: 1px;
+  font-size:20px;
+  color: #fff;
+  text-align: center;
+  padding: 10px; 
+  font-family:verdana;
+  
+  vertical-align:middle;
+  display:table-cell;
+
+}
 #nav li:hover{
   background-color:#69D2E7;
 
