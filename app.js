@@ -34,6 +34,7 @@ usersTBL.insert({
 var express = require('express')
 var ninja = require('./routes/ninja')
   , user = require('./routes/user')
+  , signup = require('./routes/signup')
   , http = require('http')
   , path = require('path');
 
@@ -72,6 +73,9 @@ app.get('/logout', function(req, res) {
     // redirect user to homepage
     res.redirect('/');
 });
+app.get('/signup', signup.form);
+app.post('/signup', signup.form_post_handler);
+
 app.post('/', ninja.home_post_handler);
 app.post('/login', ninja.login_post_handler);
 
