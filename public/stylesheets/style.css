@@ -42,10 +42,10 @@ p {
 
     border-right: 1px solid #A0A0A0;
       border-left: 1px solid #A0A0A0;
-   border-bottom: 1px solid #505050;
+   border-bottom: 1px solid #A0A0A0;
 border-top: 1px solid #A0A0A0;
   background: #f8f8f8;
-  box-shadow: 1px 1px 1px #333;
+  box-shadow: 1px 1px 1px #666;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
  
@@ -89,6 +89,7 @@ border-top: 1px solid #A0A0A0;
 #nav2 {
   width: 100%;
   height: 40px;
+  
 }
 #nav2 ol {
   padding: 0px;
