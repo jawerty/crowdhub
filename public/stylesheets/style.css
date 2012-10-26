@@ -81,15 +81,13 @@ p {
   background-color:#69D2E7;
 
 }
-#nav a:hover{
 
-}
 
 #li_logo{
 	
 }
 #li_logo:hover{
-    background: #606060;
+    background-color: #606060;
 }
 #nav a {
   text-decoration:none;
@@ -218,6 +216,7 @@ margin: 10px;
 /**/
 #userbar {
   margin-bottom: 10px;
+  font-size: 80%;
 }
 #footer {
   margin: 100px;
