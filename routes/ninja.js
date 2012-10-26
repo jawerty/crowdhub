@@ -59,3 +59,10 @@ exports.login_post_handler = function(req, res) {
     // redirect the user to homepage
     res.redirect('/login');
 };
+
+exports.profile = function(req, res) {
+	res.render('profile', {title: 'NinjaMine | ' + req.session.username + '\'s Profile', username: req.session.username})
+}
+exports.profile_post_handler = function(req, res) {
+	res.redirect('/user/:id');
+}

@@ -60,11 +60,12 @@ app.configure('development', function(){
 
 app.get('/login', ninja.login);
 app.get('/', ninja.home);
+app.get('/users/:id', ninja.profile);
 app.get('/users', user.list);
 // display the list of quotes
 app.get('/quotes', ninja.quotes);
 // show individual quote
-app.get('/user/:id', ninja.quote);
+app.get('/quote/:id', ninja.quote);
 // show general pages
 app.get('/page', ninja.page);
 app.get('/logout', function(req, res) {
@@ -78,7 +79,7 @@ app.post('/signup', signup.form_post_handler);
 
 app.post('/', ninja.home_post_handler);
 app.post('/login', ninja.login_post_handler);
-
+app.post('/user/:id', ninja.profile_post_handler);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
