@@ -133,9 +133,12 @@ font-family: verdana;
   }
 #display h2 {
 font-family: verdana;
-  font-size:30px;
-  color:#F38630;
-  margin: 4px 10px;
+  font-size:25px;
+  color:#FA6900;
+  margin: 20px 10px;
+}
+#display a {
+text-decoration: none;
 }
 #borderdiv{
 color: #505050;
