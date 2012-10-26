@@ -60,7 +60,7 @@ app.configure('development', function(){
 
 app.get('/login', ninja.login);
 app.get('/', ninja.home);
-app.get('/users/:id', ninja.profile);
+app.get('/user/:id', ninja.profile);
 app.get('/users', user.list);
 
 // display the list of quotes
