@@ -89,9 +89,15 @@ p {
 }
 #nav a {
   text-decoration:none;
-  color: #e0e4cc;
     vertical-align:middle;
   display:table-cell;
+  border-radius: 1px;
+  font-size:20px;
+  color: #fff;
+  text-align: center;
+  padding: 10px; 
+  font-family:verdana;
+  
 
 
 }
