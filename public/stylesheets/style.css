@@ -73,6 +73,7 @@ p {
   font-family:verdana;
   
 
+
 }
 #nav a:hover{
   background-color:#69D2E7;
@@ -87,8 +88,7 @@ p {
 #nav a {
   text-decoration:none;
   color: #e0e4cc;
-    vertical-align:middle;
-  display:table-cell;
+  
 
 
 }
