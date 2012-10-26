@@ -84,7 +84,8 @@ p {
 
 
 #li_logo{
-	
+	    background-color: #505050;
+
 }
 #li_logo:hover{
     background-color: #606060;
@@ -111,7 +112,7 @@ p {
 right:0%;
 }
 #search:hover {
-
+    background-color: #505050;
 }
 #searchBox {
 color: #777;
@@ -216,8 +217,7 @@ margin: 10px;
 /**/
 #userbar {
   margin-bottom: 10px;
-  font-size: 80%;
-}
+ }
 #footer {
   margin: 100px;
   text-align: center;
