@@ -131,6 +131,20 @@ font-family: verdana;
   margin: 0px 10px;
   
   }
+#display h2 {
+font-family: verdana;
+  font-size:30px;
+  color:#F38630;
+  margin: 4px 10px;
+}
+#borderdiv{
+color: #505050;
+border-radius: 2px;
+padding: 6px;
+border: 1px solid #D7D7D7;
+box-shadow: 3px 3px 3px 3px #ddd;
+margin: 10px;
+}
   #quote-display{
   margin: 20px;
 
