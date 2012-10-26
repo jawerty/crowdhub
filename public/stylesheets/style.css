@@ -90,7 +90,7 @@ p {
 #li_logo:hover{
     background-color: #606060;
 }
-#li_logo a:hover{
+#li_logo li:hover{
     background-color: #606060;
 
 }
