@@ -57,6 +57,7 @@ p {
   border-left: 1px solid #202020;
   border-right: 1px solid #202020;
   width: 100%;
+  display: block;
   top: 0%;
 }
 #nav li {
@@ -72,7 +73,8 @@ p {
   padding: 10px; 
   font-family:verdana;
   
-
+  vertical-align:middle;
+  display:table-cell;
 
 }
 #nav a:hover{
@@ -88,7 +90,8 @@ p {
 #nav a {
   text-decoration:none;
   color: #e0e4cc;
-  
+    vertical-align:middle;
+  display:table-cell;
 
 
 }
