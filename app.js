@@ -56,7 +56,7 @@ app.configure(function(){
 app.configure('development', function(){
   app.use(express.errorHandler());
 });
-
+///////////////////////////routes//////////////////////////////
 app.get('/login', ninja.login);
 app.get('/', ninja.home);
 app.get('/user/:id', ninja.profile);
@@ -80,6 +80,16 @@ app.post('/signup', signup.form_post_handler);
 app.post('/', ninja.home_post_handler);
 app.post('/login', ninja.login_post_handler);
 app.post('/user/:id', ninja.profile_post_handler);
+
+//errorhandling
+app.get('/success', ninja.success);
+app.get('/failure', ninja.failure);
+//
+////////////////////////////endroutes///////////////////////////////
+
+
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

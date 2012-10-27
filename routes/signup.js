@@ -2,12 +2,12 @@ exports.form = function(req, res) {
 	res.render('signup', {title: 'NinjaMine | Sign Up'});
 }
 exports.form_post_handler = function(req, res) {
-    // if the username is not submitted, give it a default of "Anonymous"
-    password1 = res.body.password1 || 'Anon';
-    if (password1) {
-    alert('password');
+    password1 = req.body.password1;
+    password2 = req.body.password2; 
+    if (password1 != password2) {
+		res.redirect('/failure');
+    }else{
+    	res.redirect('/success');
     }
-    
-    // redirect the user to homepage
-    res.redirect('/signup');
+
 };

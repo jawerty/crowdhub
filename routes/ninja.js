@@ -1,4 +1,14 @@
-  
+//success and failure
+exports.success = function(req, res) {
+  res.render('error_handling/success');
+}
+exports.failure = function(req, res) {
+  res.render('error_handling/failure');
+}
+//end
+
+
+
 // handler for homepage
 exports.home = function(req, res) {
 if (typeof req.session.username == 'undefined') {
