@@ -1,8 +1,19 @@
 
 #userbar
 	li#welcome
-		| Welcome #{username}
+		if(typeof username !== 'undefined')
+			| Welcome #{username}
+		else
+			| Hello Guest
 	li
-		a(href='/quote/#{username}') My Quotes
+		if(typeof username !== 'undefined')
+			a(href='/quote/#{username}') My Quotes
+		else 
+			a(href='/quotes') Top Quotes
 	li
-		a(href='/logout') Log Out
+		a(href='/login') Login
+	li
+		if(typeof username !== 'undefined')
+			a(href='/logout') Logout
+		
+		

@@ -1,6 +1,5 @@
 var crypto = require('crypto');
-
-username = "Guest";
+username = undefined;
 /**
  * Module dependencies.
  */

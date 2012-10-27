@@ -1,11 +1,13 @@
   
 // handler for homepage
 exports.home = function(req, res) {
-    // if user is not logged in, ask them to login
-    if (typeof req.session.username == 'undefined') res.render('login', { title: 'NinjaMine | Login'});
-    // if user is logged in already, take them straight to the items list
-    else res.redirect('/quotes');
+if (typeof req.session.username == 'undefined') {
+	username = undefined; 
+	res.render('login', { title: 'NinjaMine | Login'});
+}
+else {res.redirect('/quotes');}
 };
+
 // handler for form submitted from homepage
 exports.home_post_handler = function(req, res) {
     // if the username is not submitted, give it a default of "Anonymous"
@@ -25,14 +27,22 @@ var quotes = {
 // handler for displaying the items
 exports.quotes = function(req, res) {
     // don't let nameless people view the items, redirect them back to the homepage
-    if (typeof req.session.username == 'undefined') res.redirect('/');
-    else res.render('quotes', { title: 'NinjaMine | Quotes', username: req.session.username, quotes:quotes });
+    //if (typeof req.session.username == 'undefined') {
+    //	username = undefined;
+    //	res.redirect('/');
+    //}
+    //else {
+    	res.render('quotes', { title: 'NinjaMine | Quotes', quotes:quotes });
+	//}
 };
 
 // handler for displaying individual items
 exports.quote = function(req, res) {
     // don't let nameless people view the items, redirect them back to the homepage
-    if (typeof req.session.username == 'undefined') res.redirect('/');
+    if (typeof req.session.username == 'undefined') {
+    	username = undefined;
+    	res.redirect('/');
+    }
     else {
         var author = quotes[req.params.id].author;
         var quote = quotes[req.params.id].quote;
@@ -61,7 +71,10 @@ exports.login_post_handler = function(req, res) {
 };
 
 exports.profile = function(req, res) {
-	if (typeof req.session.username == 'undefined') res.redirect('/');
+	if (typeof req.session.username == 'undefined') {
+		username = undefined;
+		res.redirect('/');
+	}
     else {
         var author = quotes[req.params.id].author;
         var quote = quotes[req.params.id].quote;

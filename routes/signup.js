@@ -3,7 +3,10 @@ exports.form = function(req, res) {
 }
 exports.form_post_handler = function(req, res) {
     // if the username is not submitted, give it a default of "Anonymous"
-    username = req.body.username || 'Anonymous';
+    password1 = res.body.password1 || 'Anon';
+    if (password1) {
+    alert('password');
+    }
     
     // redirect the user to homepage
     res.redirect('/signup');
