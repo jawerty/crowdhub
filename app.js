@@ -75,13 +75,15 @@ app.get('/logout', function(req, res) {
     res.redirect('/');
 });
 app.get('/signup', signup.form);
-app.post('/signup', signup.form_post_handler);
+app.get('/signup/success', signup.signupSuccess);
+app.get('/signup/failure',signup.signupFailure);
 
+app.post('/signup', signup.form_post_handler);
 app.post('/', ninja.home_post_handler);
 app.post('/login', ninja.login_post_handler);
 app.post('/user/:id', ninja.profile_post_handler);
 
-//errorhandling
+//error_handling
 app.get('/success', ninja.success);
 app.get('/failure', ninja.failure);
 //

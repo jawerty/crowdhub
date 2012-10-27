@@ -1,10 +1,10 @@
 //success and failure
 exports.success = function(req, res) {
   res.render('error_handling/success');
-}
+};
 exports.failure = function(req, res) {
   res.render('error_handling/failure');
-}
+};
 //end
 
 
