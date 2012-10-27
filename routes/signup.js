@@ -22,7 +22,13 @@ exports.form_post_handler = function(req, res) {
 		res.redirect('/signup/failure');
 	
     }else{
-    	if (username);
+		usersTBL.find({ userName: username }){ 
+			var n = 0;
+		}
+		if (n == 0){
+			res.redirect('/signup/success');
+		}
+
     }
 
 };
