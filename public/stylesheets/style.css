@@ -13,7 +13,7 @@ body {
   padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
  
-   url('/images/cream_dust.png'); 
+   background: url('/images/cream_dust.png'); 
    width:100%;
     height: 100%;
 }
@@ -38,7 +38,7 @@ p {
       border-left: 1px solid #A0A0A0;
    border-bottom: 1px solid #A0A0A0;
 border-top: 1px solid #A0A0A0;
-  background: #f8f8f8;
+   background: url('/images/cream_dust.png'); 
   box-shadow: 1px 1px 1px #666;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -231,23 +231,25 @@ padding: 10px;
 margin: 10px;
 }
 #main_content {
-padding: 10px;
-margin: 5px 10px 10px 30px;
+
   float:left;
   width:60%;
   border-radius: 10px;
   background: #F7F7F7;
   border: 1px solid #D7D7D7;
+  padding: 10px;
+margin: 5px 10px 10px 30px;
 } 
 /**home sideContent**/
 #side_content {
   float:right;
-  width: 34%;
-  background-color: #F7F7F7;
-  height: 100%;
-  
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
+  width: 30%;
+  border-radius: 10px;
+  background: #F7F7F7;
+  border: 1px solid #D7D7D7;
+  padding: 10px;
+margin: 5px 30px 10px 10px;
+height:100%;
 
 } 
 #side_content h1 {
@@ -289,4 +291,36 @@ margin: 0px;
 #footer {
   margin: 100px;
   text-align: center;
+}
+
+#formTextbox {
+width:290px;
+color: #777;
+border-radius: 7px;
+font-size:25px;
+padding: 10px;
+border: 2px solid #A7A7A7;
+box-shadow: inset 1px 1px 1px 1px #eee;
+box-shadow: 2px 2px 2px 2px #eee;
+
+}
+#formSubmit {
+background-color: #69D2E7;
+width:312px;
+    height: 50px;
+    color: #fff;
+    font-size: 25px;
+    text-shadow: 0px -1px 0px #5b6ddc;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .49);
+ 	padding: 10px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    border-radius: 7px;
+ 
+    -webkit-box-shadow: inset 0px 1px 0px #9ab1ec;
+    box-shadow: inset 0px 1px 0px #9ab1ec;
+ 
+    cursor: pointer;
 }

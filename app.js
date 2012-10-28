@@ -1,35 +1,14 @@
-var crypto = require('crypto');
-username = undefined;
 /**
  * Module dependencies.
  */
-/**Mongolian**/
-var Mongolian = require('mongolian');
-var server, db;
+var mongoose = require('mongoose');
+var crypto = require('crypto');
+/***************************/
 
-if(process.env.MONGOHQ_URL) {
-  db = new Mongolian(process.env.MONGOHQ_URL);
-} else {
-  server = new Mongolian;
-  db = server.db('ninjamineDB');
-}
-var usersTBL = db.collection("Users");
-var quoteTBL = db.collection("Quotes");
 
-var password = "blueco";
+username = undefined;
 
-crypto.createHash('md5').update(password).digest("hex");
-usersTBL.insert({
-  id: 0,
-  first: "Jared",
-  last: "Wright",
-  username: "Admin",
-  password: password,
-  email: "jawerty210@gmail.com",
-  bio: "I am the BDFL."
-})
 
-/***********/
 var express = require('express')
 var ninja = require('./routes/ninja')
   , user = require('./routes/user')
