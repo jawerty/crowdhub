@@ -3,5 +3,5 @@
  */
 
 exports.list = function(req, res){
-  res.send("Users");
+  res.send("all the users");
 };

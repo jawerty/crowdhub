@@ -50,6 +50,7 @@ app.get('/page', ninja.page);
 app.get('/logout', function(req, res) {
     // delete the session variable
     delete req.session.username;
+    username = undefined; 
     // redirect user to homepage
     res.redirect('/');
 });

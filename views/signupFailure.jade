@@ -2,11 +2,12 @@ extends layout
 block mainContent
 
 	#display
-		h1(style="color:RED;") FAILURE
-		p
-		if(typeof failure2 !== 'undefined')
-			| #{failure1}
-		p
-		if(typeof failure2 !== 'undefined')
-			| #{failure2}
-		a(href="/signup") Go back to Signup page...
+		h1(style="color:#CD5555;") FAILURE
+		#signup
+			p
+			if(typeof failure2 !== 'undefined')
+				| #{failure1}
+			p
+			if(typeof failure2 !== 'undefined')
+				| #{failure2}
+			a(href="/signup") Go back to Signup page...
