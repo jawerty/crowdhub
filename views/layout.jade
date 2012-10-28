@@ -44,7 +44,18 @@ html
 									| : No recent Quotes.
 				br
 		#footer
-			div Copyright &copy; NinjaMine #{+new Date().getFullYear()} 
-			a(href='/page?name=about') About 
-			| |  
-			a(href='/page?name=contact') Contact Us
+			#footer_content
+				div(style="padding: 5px;") Copyright &copy; NinjaMine #{+new Date().getFullYear()} 
+				a(href='/page?name=about') About 
+				| |  
+				a(href='/page?name=contact') Contact Us 
+				| |  
+				a(href='https://github.com/jawerty/ninjamine') GitHub 
+				| | 
+				a(href='/page?name=blog') Blog 
+				br
+				br
+				script 
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				a(href="https://twitter.com/Jawerty",data-size="large",class="twitter-follow-button", data-show-count="false") Follow @Jawerty
+			
