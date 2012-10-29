@@ -1,4 +1,9 @@
 	
+/**DEPENDENCIES**/
+var mongoose = require( 'mongoose' );
+var user     = mongoose.model( 'user' );
+
+/*************/
 
 //success and failure
 exports.success = function(req, res) {
@@ -17,20 +22,17 @@ var quotes = {
 
 // handler for homepage
 exports.home = function(req, res) {
-if (typeof req.session.username == 'undefined') {
-	res.render('login', { title: 'NinjaMine | Login'});
-}
-else {res.redirect('/quotes');}
+    if (typeof req.session.username == 'undefined') {
+    res.redirect('/login');
+    }
+    else {
+    res.redirect('/quotes');
+    }
 };
 
 // handler for form submitted from homepage
 exports.home_post_handler = function(req, res) {
-    // if the username is not submitted, give it a default of "Anonymous"
-    username = req.body.username;
-    // store the username as a session variable
-    req.session.username = username;
-    // redirect the user to homepage
-    res.redirect('/');
+
 };
 
 
@@ -50,9 +52,8 @@ exports.quotes = function(req, res) {
 exports.quote = function(req, res) {
     // don't let nameless people view the items, redirect them back to the homepage
     
-        var author = quotes[req.params.id].author;
-        var quote = quotes[req.params.id].quote;
-        res.render('quote', { title: 'NinjaMine | ' + author, username: req.session.username, author:author, quote:quote });
+
+        res.render('quote', { title: 'NinjaMine | Quote page - in production'});
     
 };
 // handler for showing simple pages
@@ -72,15 +73,10 @@ exports.page = function(req, res) {
 
 
 exports.profile = function(req, res) {
-	if (typeof req.session.username == 'undefined') {
-		username = undefined;
-		res.redirect('/');
-	}
-    else {
-        var author = quotes[req.params.id].author;
-        var quote = quotes[req.params.id].quote;
-        res.render('profile', { title: 'NinjaMine | ' + author, username: req.session.username, author:author, quote:quote });
-    }
+	
+    //var author = quotes[req.params.id].author;
+    res.render('profile', { title: 'NinjaMine | Profile page - in production' });
+    
 }
 //exports.profile_post_handler = function(req, res) {
 //	res.redirect('/user/:id');

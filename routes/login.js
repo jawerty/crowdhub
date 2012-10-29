@@ -16,23 +16,37 @@ exports.login = function(req, res) {
 exports.login_post_handler = function(req, res) {
 	
     username = req.body.username;
-    password = req.body.username;
+    password = req.body.password;
 
     user.findOne({user_name: username}, function(err, usernames) {
         if (usernames) {
             console.log('Username and exists!...');
 
+            user.findOne({user_name: username, password1: password}, function(err, passwords) {
+                if (passwords){
+                    console.log('username and password match for username,' + username); 
+
+                    req.session.username = username;
+
+                    res.redirect('/login/success')
+                }else{
+                    console.log('username and password do not match for username,' + username);
+                    failure1 = 'Username and password do not match.'
+                    failure2 = null;
+                    res.redirect('/login/failure');
+                }
+            });
+            
         }else{
             console.log('Cannot log in, username does not exist.');
-            failure1 = 'Username does not exist.'
+            failure1 = 'Username does not exist.';
             failure2 = null;
             res.redirect('/login/failure');
         }
+
     });
 
 
-    req.session.username = username;
-    res.redirect('/login');
 
 };
 

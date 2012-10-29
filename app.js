@@ -40,7 +40,7 @@ app.configure('development', function(){
 
 
 app.get('/', ninja.home);
-app.get('/user/:id', ninja.profile);
+app.get('/user', ninja.profile);
 app.get('/users', user.list);
 
 app.get('/login', login.login);
