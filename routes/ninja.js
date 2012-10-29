@@ -60,10 +60,10 @@ exports.quote = function(req, res) {
 exports.page = function(req, res) {
     var name = req.query.name;
     var contents = {
-        about: 'NinjaMine is a website where users post, like, and share their own quotes. \
-        		All quotes posted to NinjaMine user-generated, so they must come from the minds \
-        		of <b>YOU</b>, the user. This website is currently in in the 0.0.1 stage. However, \
-        		updates on development and progress will be committed and shared on the site\'s github. \
+        about: 'NinjaMine is a website where users post, like and share their own quotes. \
+        		All quotes posted to NinjaMine are user-generated, so they come from the minds \
+        		of <b>YOU</b>, the user. This website is currently in its 0.0.1 version. However, \
+        		updates on development and progress will be committed and shared on the site\'s GitHub. \
         		<br><br><a href=\'https://github.com/jawerty/ninjamine\'>Ninjamine\'s GitHub</a>',
         contact: 'You can contact the developers here:<br>Jared Wright - email: jawerty210@gmail.com<br><br>My personal website is <a href=\'http://wrightdev.herokuapp.com\'>here</a>',
         blog: 'The blog is currently in production...'

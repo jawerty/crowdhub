@@ -7,22 +7,22 @@ block mainContent
 			h1 Sign up to NinjaMine
 			form(method='post')
 				#signup
-					input(id="formTextbox", type='text', name='textFirstName', placeholder="First Name")
+					input(id="formTextbox", required="required", type='text', name='textFirstName', placeholder="First Name")
 					br
 					br
-					input(id="formTextbox", type='text', name='textLastName', placeholder="Last Name")
+					input(id="formTextbox", required="required", type='text', name='textLastName', placeholder="Last Name")
 					br
 					br
-					input(id="formTextbox", type='text', name='username', placeholder="Username")
+					input(id="formTextbox", required="required", type='text', name='username', placeholder="Username")
 					br
 					br
-					input(id="formTextbox", type='text', name='email', placeholder="Email")
+					input(id="formTextbox", required="required", type='text', name='email', placeholder="Email")
 					br
 					br
-					input(id="formTextbox", type='password', name='password1', placeholder="Password")
+					input(id="formTextbox", required="required", type='password', name='password1', placeholder="Password")
 					br
 					br
-					input(id="formTextbox", type='password', name='password2', placeholder="Confirm Password")
+					input(id="formTextbox", required="required", type='password', name='password2', placeholder="Confirm Password")
 					br
 					br
 					textarea(id="formTextbox", name='bio', placeholder="\"My Favorite Quote\"", style="width:290px;height:96px;resize:none;")
