@@ -37,11 +37,15 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 ///////////////////////////routes//////////////////////////////
-app.get('/login', login.login);
+
+
 app.get('/', ninja.home);
 app.get('/user/:id', ninja.profile);
 app.get('/users', user.list);
 
+app.get('/login', login.login);
+app.get('/login/success', login.loginSuccess);
+app.get('/login/failure',login.loginFailure);
 // display the list of quotes
 app.get('/quotes', ninja.quotes);
 // show individual quote
@@ -58,6 +62,7 @@ app.get('/logout', function(req, res) {
 app.get('/signup', signup.form);
 app.get('/signup/success', signup.signupSuccess);
 app.get('/signup/failure',signup.signupFailure);
+
 
 app.post('/signup', signup.form_post_handler);
 app.post('/', ninja.home_post_handler);

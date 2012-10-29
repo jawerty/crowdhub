@@ -9,7 +9,11 @@ exports.failure = function(req, res) {
 };
 //end
 
-
+var quotes = {
+    Jared:{author:'Jared Wright (BDFL)', quote:"Hello World!", },
+    Jawerty:{author:'Jawerty', quote:"Ro Ro Fight the Power..."},
+    Ninjaminder:{author:'Ninjaminder', quote:"I didn't chose the NinjaMine life, NinjaMine chose me."}
+};
 
 // handler for homepage
 exports.home = function(req, res) {

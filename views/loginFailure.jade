@@ -1,0 +1,13 @@
+extends layout
+block mainContent
+
+	#display
+		h1(style="color:#CD5555;") FAILURE
+		#signup
+			p
+			if(typeof failure2 !== 'undefined')
+				| #{failure1}
+			p
+			if(typeof failure2 !== 'undefined')
+				| #{failure2}
+			a(href="/login") Go back to Login page...
