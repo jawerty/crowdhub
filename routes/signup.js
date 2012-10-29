@@ -1,27 +1,8 @@
-/**Mongoose**/
-var mongoose = require('mongoose');
-var db_url = process.env.MONGOHQ_URL || "http://localhost:27017/ninjamineDB",
-	db = mongoose.connect(db_url);
+var mongoose = require( 'mongoose' );
+var user     = mongoose.model( 'user' );
 
+var failure1, failure2;
 
-var userSchema = new mongoose.Schema({
-    id: Number,
-    first: String,
-    last: String,
-    email: String,
-    user_name: String,
-    password1: String,
-    password2: String,
-    bio: String
-})
-var user = db.model('User', userSchema);
-
-/*************/
-
-
-var ID = 0;
-var failure1;
-var failure2;
 exports.form = function(req, res) {
 	res.render('signup', {title: 'NinjaMine | Sign Up'});
 };
@@ -32,24 +13,44 @@ exports.form_post_handler = function(req, res) {
     password1 = req.body.password1;
     password2 = req.body.password2; 
     newUsername = req.body.username;
+    bio = req.body.bio;
     if (password1 != password2) {
 		failure1 = 'Passwords do not match';
 		failure2 = null;
 		res.redirect('/signup/failure');
 		
     }else{
-    	var newUser = new user({id:ID++, 
-    							first: String,
-    							last: String,
-    							email: String,
-    							user_name: String,
-    							password1: String,
-    							password2: String,
-    							bio: String	
-    						});
+        user.findOne({user_name: newUsername}, function(err, usernames) {
+            if (usernames) { 
+                console.log("user exists");
+                failure1 = 'Username already exists';
+                failure2 = null;
+                res.redirect('/signup/failure');
 
-    	console.log(newUser);
-		res.redirect('/signup/success');
+            } else { 
+                console.log("user doesn't exist"); 
+                var newUser = new user({ 
+                                first: firstName,
+                                last: lastName,
+                                email: email,
+                                user_name: newUsername,
+                                password1: password1,
+                                password2: password2,
+                                bio: bio    
+                            });
+                newUser.save();
+
+                console.log(newUser + "has been initiated.");
+        
+                res.redirect('/signup/success');
+            }
+        });
+
+
+        
+            
+    	
+
 
     }
 

@@ -1,18 +1,19 @@
 /**
  * Module dependencies.
  */
-var mongoose = require('mongoose');
 var crypto = require('crypto');
+require( './db' );
+
 /***************************/
 
-
 username = undefined;
-
+                                       
 
 var express = require('express')
 var ninja = require('./routes/ninja')
   , user = require('./routes/user')
   , signup = require('./routes/signup')
+  , login = require('./routes/login')
   , http = require('http')
   , path = require('path');
 
@@ -36,7 +37,7 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 ///////////////////////////routes//////////////////////////////
-app.get('/login', ninja.login);
+app.get('/login', login.login);
 app.get('/', ninja.home);
 app.get('/user/:id', ninja.profile);
 app.get('/users', user.list);
@@ -60,7 +61,7 @@ app.get('/signup/failure',signup.signupFailure);
 
 app.post('/signup', signup.form_post_handler);
 app.post('/', ninja.home_post_handler);
-app.post('/login', ninja.login_post_handler);
+app.post('/login', login.login_post_handler);
 app.post('/user/:id', ninja.profile_post_handler);
 
 //error_handling

@@ -28,12 +28,7 @@ exports.home_post_handler = function(req, res) {
     // redirect the user to homepage
     res.redirect('/');
 };
-// our 'database'
-var quotes = {
-    Jared:{author:'Jared Wright (BDFL)', quote:"Hello World!", },
-    Jawerty:{author:'Jawerty', quote:"Ro Ro Fight the Power..."},
-    Ninjaminder:{author:'Ninjaminder', quote:"I didn't chose the NinjaMine life, NinjaMine chose me."}
-};
+
 
 // handler for displaying the items
 exports.quotes = function(req, res) {
@@ -70,17 +65,7 @@ exports.page = function(req, res) {
     };
     res.render('page', { title: 'NinjaMine | ' + name, username: req.session.username, content:contents[name] });
 };
-exports.login = function(req, res) {
-	res.render('login', {title: 'NinjaMine | Login'});
-}
-exports.login_post_handler = function(req, res) {
-	
-    username = req.body.username;
-    // store the username as a session variable
-    req.session.username = username;
-    // redirect the user to homepage
-    res.redirect('/login');
-};
+
 
 exports.profile = function(req, res) {
 	if (typeof req.session.username == 'undefined') {
