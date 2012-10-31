@@ -20,7 +20,7 @@ exports.form_post_handler = function(req, res) {
     if(password1.length < eight_char.length || password1.length > twenty_six_char.length){
 
         console.log('password length is not valid');
-        failure1 = 'Password length must be between 8 and 26 characters';
+        failure1 = 'Password length must be from 8 to 26 characters';
         failure2 = null;
         res.redirect('signup/failure');
 

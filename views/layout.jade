@@ -3,7 +3,11 @@ html
 	head
 		title= title
 		link(rel="shortcut icon", href="/images/theninjastar.png")
-		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		link(rel='stylesheet', href='/stylesheets/nav.css')
+		link(rel='stylesheet', href='/stylesheets/wrapper.css')
+		link(rel='stylesheet', href='/stylesheets/footer.css')
+
 	body
 		#nav
 			ol
@@ -11,7 +15,7 @@ html
 					li
 						img(src='/images/ninjastar.png', height=60, width=220)
 				li
-					a(href="/user") Profile
+					a(href="/user/") Profile
 				li
 					a(href="/quotes") Quotes
 				li	
@@ -19,6 +23,8 @@ html
 				li#search 
 					form(method="get") 
 						input(type="text", id="searchBox", name="searchBox", placeholder="Search Quotes")
+				li#newQuote
+					a(href="/new/") New Quote
 		#nav2
 			ol
 				include userbar

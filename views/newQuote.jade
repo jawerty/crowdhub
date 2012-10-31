@@ -1,0 +1,17 @@
+extends layout
+block mainContent
+	#display
+		h1 New Quote
+		
+		form(method='post')
+			#signup
+				p 
+					| #{error}
+				br
+				input(type='text', id="formTextbox", required="required",name='category', placeholder='Category')
+				br
+				br
+				textarea(style='width: 500px; height: 150px; resize:none;', id="formTextbox", required="required", name='theQuote', placeholder='Your quote...')
+				br
+				br
+				input(type='submit', name='submitBtn', id='formSubmit',value='Create')

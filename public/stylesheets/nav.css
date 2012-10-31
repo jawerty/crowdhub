@@ -1,0 +1,159 @@
+/*******main nav*******/
+#nav {
+  width: 100%;
+ 
+}
+#nav ol {
+  padding: 0px;
+  border-radius: 1px;
+  background: #505050;/**url('/images/blue_text_lines.png');**/
+  border-left: 1px solid #202020;
+  border-right: 1px solid #202020;
+  border-top: 2px solid #404040;
+  width: 100%;
+  display: block;
+      box-shadow: inset 0px -1px 1px #69D2E7;
+
+  top: 0%;
+}
+#nav li {
+
+  margin: 0px;
+  margin-right: 2px;
+
+  
+  border-radius: 1px;
+  font-size:20px;
+  color: #fff;
+  text-align: center;
+  padding: 10px; 
+  font-family:verdana;
+
+  vertical-align:middle;
+  display:table-cell;
+
+}
+#nav li:hover{
+  background-color:#69D2E7;
+
+}
+#li_logo{
+      background-color: none;
+
+}
+#li_logo:hover{
+    background-color: #606060;
+}
+#li_logo li:hover{
+    background-color: #606060;
+
+}
+#nav a {
+  text-decoration:none;
+    vertical-align:middle;
+  display:table-cell;
+  border-radius: 1px;
+  font-size:20px;
+  color: #fff;
+  text-align: center;
+  padding: 10px; 
+  font-family:verdana;
+  
+
+
+}
+
+#nav a:hover {
+  
+}
+#search {
+right:0%;
+}
+#nav #search:hover {
+    background-color: #505050;
+}
+
+#searchBox {
+color: #777;
+border-radius: 7px;
+padding: 6px;
+border: 1px solid #D7D7D7;
+box-shadow: inset 3px 3px 3px 3px #ddd;
+}
+/*******end main nav*******/
+
+/*******second nav*******/
+#nav2 {
+  width: 100%;
+  height: 40px;
+
+  
+}
+#nav2 ol {
+  padding: 0px;
+  border-radius: 1px;
+  background: #69D2E7;
+  border-left: 1px solid #D7D7D7;
+  border-right: 1px solid #D7D7D7;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0%;
+ 
+
+}
+#nav2 li {
+
+  margin: 0px;
+  margin-right: 2px;
+
+  
+  border-radius: 1px;
+  font-size:20px;
+  color: #F38630;
+  text-align: center;
+  padding: 10px; 
+  font-family:verdana;
+  
+  vertical-align:middle;
+  display:table-cell;
+
+}
+#nav2 li:hover{
+  /**background-color:#69D2E7;**/
+  
+}
+#nav2 a {
+text-decoration: none;
+color: #fff;
+}
+#welcome{
+}
+#userbar {
+float:right;
+margin-right: 10px;
+ }
+ #userbar li{
+margin: 0px;
+  margin-right: 2px;
+
+  
+  border-radius: 1px;
+  font-size:15px;
+  color: #606060;
+  text-align: center;
+  padding: 10px; 
+  font-family:verdana;
+  
+  vertical-align:middle;
+  display:table-cell; }
+#userbar li:hover{
+  }
+
+/*******end second nav*******/
+
+
+
+
+
+

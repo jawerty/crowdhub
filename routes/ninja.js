@@ -1,10 +1,10 @@
-	
+  	
 /**DEPENDENCIES**/
 var mongoose = require( 'mongoose' );
 var user     = mongoose.model( 'user' );
-
+  
 /*************/
-
+  
 //success and failure
 exports.success = function(req, res) {
   res.render('error_handling/success');
@@ -13,13 +13,12 @@ exports.failure = function(req, res) {
   res.render('error_handling/failure');
 };
 //end
-
+    
 var quotes = {
     Jared:{author:'Jared Wright (BDFL)', quote:"Hello World!", },
     Jawerty:{author:'Jawerty', quote:"Ro Ro Fight the Power..."},
     Ninjaminder:{author:'Ninjaminder', quote:"I didn't chose the NinjaMine life, NinjaMine chose me."}
 };
-
 // handler for homepage
 exports.home = function(req, res) {
     if (typeof req.session.username == 'undefined') {
@@ -29,30 +28,30 @@ exports.home = function(req, res) {
     res.redirect('/quotes');
     }
 };
-
+  
 // handler for form submitted from homepage
 exports.home_post_handler = function(req, res) {
-
+  
 };
-
-
+  
+  
 // handler for displaying the items
 exports.quotes = function(req, res) {
-    // don't let nameless people view the items, redirect them back to the homepage
+    //don't let nameless people view the items, redirect them back to the homepage
     //if (typeof req.session.username == 'undefined') {
     //	username = undefined;
     //	res.redirect('/');
     //}
     //else {
     	res.render('quotes', { title: 'NinjaMine | Quotes', quotes:quotes });
-	//}
+  	//}
 };
-
+  
 // handler for displaying individual items
 exports.quote = function(req, res) {
     // don't let nameless people view the items, redirect them back to the homepage
     
-
+  
         res.render('quote', { title: 'NinjaMine | Quote page - in production'});
     
 };
@@ -66,18 +65,11 @@ exports.page = function(req, res) {
         		updates on development and progress will be committed and shared on the site\'s GitHub. \
         		<br><br><a href=\'https://github.com/jawerty/ninjamine\'>Ninjamine\'s GitHub</a>',
         contact: 'You can contact the developers here:<br>Jared Wright - email: jawerty210@gmail.com<br><br>My personal website is <a href=\'http://wrightdev.herokuapp.com\'>here</a>',
-        blog: 'The blog is currently in production...'
+        blog: 'The blog is currently in production...',
+        New: 'Quote creation is currently in development.'
     };
     res.render('page', { title: 'NinjaMine | ' + name, username: req.session.username, content:contents[name] });
 };
-
-
-exports.profile = function(req, res) {
-	
-    //var author = quotes[req.params.id].author;
-    res.render('profile', { title: 'NinjaMine | Profile page - in production' });
-    
-}
-//exports.profile_post_handler = function(req, res) {
-//	res.redirect('/user/:id');
-//}
+  
+  
+  
