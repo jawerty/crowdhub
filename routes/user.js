@@ -2,6 +2,6 @@
  * GET users listing.
  */
 
-exports.list = function(req, res){
-  res.send("all the users");
+exports.default = function(req, res){
+  res.render('profile', {title: 'Ninjamine | No Profile', header: 'You have to login to view your profile.'})
 };

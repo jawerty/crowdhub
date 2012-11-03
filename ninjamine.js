@@ -41,8 +41,8 @@ app.configure('development', function(){
 
    
 app.get('/', ninja.home);
-app.get('/user/', profile.profile);
-app.get('/users', user.list);
+app.get('/user/:id', profile.profile);
+app.get('/users', user.default);
    
 app.get('/login', login.login);
 app.get('/login/success', login.loginSuccess);
@@ -81,5 +81,5 @@ app.get('/failure', ninja.failure);
    
    
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
+  console.log("Ninjamine server listening on port " + app.get('port'));
 });
