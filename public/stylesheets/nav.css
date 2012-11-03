@@ -12,7 +12,6 @@
   border-top: 2px solid #404040;
   width: 100%;
   display: block;
-  box-shadow: inset 0px -1px 1px #69D2E7;
 
   top: 0%;
 }
@@ -76,7 +75,7 @@ color: #777;
 border-radius: 7px;
 padding: 6px;
 border: 1px solid #D7D7D7;
-box-shadow: inset 3px 3px 3px 3px #ddd;
+box-shadow: inset 3px 3px 3px 3px #eee;
 }
 /*******end main nav*******/
 
