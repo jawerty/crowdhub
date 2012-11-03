@@ -27,10 +27,10 @@ html
 				li	
 					a(href="/signup") Sign Up
 				li#search 
-					form(method="get") 
-						input(type="text", id="searchBox", name="searchBox", placeholder="Search")
+					form(method="get", action="/search_results") 
+						input(type="text", id="searchBox", name="query", placeholder="Search a user")
 				li#newQuote
-					a(href="/new/") New Quote
+					a(href="/new") New Quote
 		#nav2
 			ol
 				include userbar

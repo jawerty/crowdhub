@@ -6,8 +6,9 @@ require( './db' );
    
 /***************************/
    
-username = undefined;
-   
+var username = undefined;
+var temp = undefined;
+
 var express = require('express')
 var ninja = require('./routes/ninja')
   , user = require('./routes/user')
@@ -15,6 +16,7 @@ var ninja = require('./routes/ninja')
   , signup = require('./routes/signup')
   , login = require('./routes/login')
   , newQuote = require('./routes/newQuote')
+  , search = require('./routes/search')
   , http = require('http')
   , path = require('path');
    
@@ -39,8 +41,10 @@ app.configure('development', function(){
 });
 ///////////////////////////routes//////////////////////////////
 
-   
+app.get('/search_results', search.results);
+
 app.get('/', ninja.home);
+
 app.get('/user/:id', profile.profile);
 app.get('/users', user.default);
    
@@ -52,7 +56,7 @@ app.get('/quotes', ninja.quotes);
 // show individual quote
 app.get('/quote/:id', ninja.quote);
 // show general pages
-app.get('/new/', newQuote.newQuote);
+app.get('/new', newQuote.newQuote);
 app.get('/page', ninja.page);
 app.get('/logout', function(req, res) {
     // delete the session variable
@@ -64,12 +68,14 @@ app.get('/logout', function(req, res) {
 app.get('/signup', signup.form);
 app.get('/signup/success', signup.signupSuccess);
 app.get('/signup/failure',signup.signupFailure);
-   
+
+app.post('/search_results', search.results_post_handler);
 app.post('/signup', signup.form_post_handler);
 app.post('/', ninja.home_post_handler);
 app.post('/login', login.login_post_handler);
 app.post('/user/:id', ninja.profile_post_handler);
-app.post('/new/', newQuote.newQuote_post_handler);   
+app.post('/new', newQuote.newQuote_post_handler); 
+
 //error_handling
 app.get('/success', ninja.success);
 app.get('/failure', ninja.failure);

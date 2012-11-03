@@ -138,3 +138,18 @@ width:314px;
  
     cursor: pointer;
 }
+
+#search {
+  margin: 20px;
+}
+#search_results {
+  margin-top: 12px;
+}
+#search_results a {
+  margin: 10px;
+  color: #F38630;
+  font-size: 30px;
+}
+#search_results a:hover{
+  color: #FA6900;
+}

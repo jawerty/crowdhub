@@ -1,0 +1,13 @@
+extends layout
+block mainContent
+	#display
+		#search
+			h1 Search Results
+			#search_results
+				p #{results_header}
+				br
+				if (typeof temp == 'undefined') 
+					p
+						| User not found in database
+				else
+					a(href="/user/#{search_result}") Profile Page -> #{search_result}
