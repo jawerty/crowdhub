@@ -14,10 +14,10 @@ exports.failure = function(req, res) {
 };
 //end
     
-var quotes = {
-    Jared:{author:'Jared Wright (BDFL)', quote:"Hello World!", },
-    Jawerty:{author:'Jawerty', quote:"Ro Ro Fight the Power..."},
-    Ninjaminder:{author:'Ninjaminder', quote:"I didn't chose the NinjaMine life, NinjaMine chose me."}
+var stories = {
+    Jared:{author:'Jared Wright (BDFL)', story:"Hello World!", },
+    Jawerty:{author:'Jawerty', story:"I went to the park and saw a duck."},
+    Ninjaminder:{author:'crowdhubman', story:"I didn't chose the crowdhub life, crowdhub chose me."}
 };
 // handler for homepage
 exports.home = function(req, res) {
@@ -25,7 +25,7 @@ exports.home = function(req, res) {
     res.redirect('/login');
     }
     else {
-    res.redirect('/quotes');
+    res.redirect('/stories');
     }
 };
   
@@ -36,39 +36,38 @@ exports.home_post_handler = function(req, res) {
   
   
 // handler for displaying the items
-exports.quotes = function(req, res) {
+exports.stories = function(req, res) {
     //don't let nameless people view the items, redirect them back to the homepage
     //if (typeof req.session.username == 'undefined') {
     //	username = undefined;
     //	res.redirect('/');
     //}
     //else {
-    	res.render('quotes', { title: 'NinjaMine | Quotes', quotes:quotes });
+    	res.render('stories', { title: 'crowdhub | Stories', stories:stories });
   	//}
 };
   
 // handler for displaying individual items
-exports.quote = function(req, res) {
+exports.story = function(req, res) {
     // don't let nameless people view the items, redirect them back to the homepage
     
   
-        res.render('quote', { title: 'NinjaMine | Quote page - in production'});
+        res.render('story', { title: 'crowdhub | Story page - in production'});
     
 };
 // handler for showing simple pages
 exports.page = function(req, res) {
     var name = req.query.name;
     var contents = {
-        about: 'NinjaMine is a website where users post, like and share their own quotes. \
-        		All quotes posted to NinjaMine are user-generated, so they come from the minds \
-        		of <b>YOU</b>, the user. This website is currently in its 0.0.1 version. However, \
+        about: 'crowdhub is a website where users post, like and share their own news stories. \
+        		All stories posted to crowdhub are user-generated. This website is currently in its 0.0.1 version. However, \
         		updates on development and progress will be committed and shared on the site\'s GitHub. \
-        		<br><br><a href=\'https://github.com/jawerty/ninjamine\'>Ninjamine\'s GitHub</a>',
+        		<br><br><a href=\'https://github.com/jawerty/crowdhub\'>crowdhub\'s GitHub</a>',
         contact: 'You can contact the developers here:<br>Jared Wright - email: jawerty210@gmail.com<br><br>My personal website is <a href=\'http://wrightdev.herokuapp.com\'>here</a>',
         blog: 'The blog is currently in production...',
-        New: 'Quote creation is currently in development.'
+        New: 'Story creation is currently in development.'
     };
-    res.render('page', { title: 'NinjaMine | ' + name, username: req.session.username, content:contents[name] });
+    res.render('page', { title: 'crowdhub | ' + name, username: req.session.username, content:contents[name] });
 };
   
   

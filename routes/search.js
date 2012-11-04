@@ -9,19 +9,19 @@ exports.results = function(req, res) {
 		if(exists){
 			if(query == ''){
 				temp = undefined;
-				res.render('search', {title: 'NinjaMine | Search Results', results_header: 'Invalid Search: Nothing'});
+				res.render('search', {title: 'crowdhub | Search Results', results_header: 'Invalid Search: Nothing'});
 
 			}else{
 				temp = "defined";
 				d = query;
-				res.render('search', {title: 'NinjaMine | Search Results', results_header: 'Users Results: ' + d, search_result: d  });
+				res.render('search', {title: 'crowdhub | Search Results', results_header: 'Users Results: ' + d, search_result: d  });
 			}
 			
 		}else{
 			temp = undefined;
 			console.log('username not found in query')
 			d = query;
-			res.render('search', {title: 'NinjaMine | Search Results', results_header: 'Users Results: ' + d});
+			res.render('search', {title: 'crowdhub | Search Results', results_header: 'Users Results: ' + d});
  		}
 	}); 
 

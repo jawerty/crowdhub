@@ -1,7 +1,7 @@
 extends layout
 block mainContent
 	#display
-		h1 New Quote
+		h1 New Story
 		
 		form(method='post')
 			#signup
@@ -11,7 +11,7 @@ block mainContent
 				input(type='text', id="formTextbox", required="required",name='category', placeholder='Category')
 				br
 				br
-				textarea(style='width: 500px; height: 150px; resize:none;', id="formTextbox", required="required", name='theQuote', placeholder='Your quote...')
+				textarea(style='width: 500px; height: 150px; resize:none;', id="formTextbox", required="required", name='theStory', placeholder='Your story...')
 				br
 				br
 				input(type='submit', name='submitBtn', id='formSubmit',value='Create')

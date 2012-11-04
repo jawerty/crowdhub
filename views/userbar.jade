@@ -2,14 +2,14 @@
 #userbar
 	li#welcome
 		if(typeof username !== 'undefined')
-			| Welcome #{username}
+			| Welcome, #{username}
 		else
-			| Hello Guest
+			| Welcome, Guest
 	li
 		if(typeof username !== 'undefined')
-			a(href='/quote/#{username}') My Quotes
+			a(href='/story/#{username}') My Stories
 		else 
-			a(href='/quotes') Top Quotes
+			a(href='/stories') Top Stories
 	li
 		a(href='/login') Login
 	li

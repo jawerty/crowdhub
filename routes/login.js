@@ -5,13 +5,13 @@ var user     = mongoose.model( 'user' );
 /*************/
 var failure1, failure2;
 
-var quotes = {
-    Jared:{author:'Jared Wright (BDFL)', quote:"Hello World!", },
-    Jawerty:{author:'Jawerty', quote:"Ro Ro Fight the Power..."},
-    Ninjaminder:{author:'Ninjaminder', quote:"I didn't chose the NinjaMine life, NinjaMine chose me."}
+var stories = {
+    Jared:{author:'Jared Wright (BDFL)', story:"Hello World!", },
+    Jawerty:{author:'Jawerty', story:"I went to the park and saw a duck"},
+    crowdhuber:{author:'crowdhuber', story:"I didn't chose the crowdhub life, crowdhub chose me."}
 };
 exports.login = function(req, res) {
-	res.render('login', {title: 'NinjaMine | Login'});
+	res.render('login', {title: 'crowdhub | Login'});
 }
 exports.login_post_handler = function(req, res) {
 	
@@ -51,8 +51,8 @@ exports.login_post_handler = function(req, res) {
 };
 
 exports.loginSuccess = function(req, res){
-    res.render('loginSuccess', {title: 'NinjaMine | Successful Login'});
+    res.render('loginSuccess', {title: 'crowdhub | Successful Login'});
 };
 exports.loginFailure = function(req, res){
-    res.render('loginFailure', {title: 'NinjaMine | Failed Login', failure1:failure1, failure2:failure2});
+    res.render('loginFailure', {title: 'crowdhub | Failed Login', failure1:failure1, failure2:failure2});
 };

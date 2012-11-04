@@ -15,7 +15,7 @@ var ninja = require('./routes/ninja')
   , profile = require('./routes/profile')
   , signup = require('./routes/signup')
   , login = require('./routes/login')
-  , newQuote = require('./routes/newQuote')
+  , newStory = require('./routes/newStory')
   , search = require('./routes/search')
   , http = require('http')
   , path = require('path');
@@ -51,12 +51,12 @@ app.get('/users', user.default);
 app.get('/login', login.login);
 app.get('/login/success', login.loginSuccess);
 app.get('/login/failure',login.loginFailure);
-// display the list of quotes
-app.get('/quotes', ninja.quotes);
-// show individual quote
-app.get('/quote/:id', ninja.quote);
+// display the list of stories
+app.get('/stories', ninja.stories);
+// show individual story
+app.get('/story/:id', ninja.stories);
 // show general pages
-app.get('/new', newQuote.newQuote);
+app.get('/new', newStory.newStory);
 app.get('/page', ninja.page);
 app.get('/logout', function(req, res) {
     // delete the session variable
@@ -74,7 +74,7 @@ app.post('/signup', signup.form_post_handler);
 app.post('/', ninja.home_post_handler);
 app.post('/login', login.login_post_handler);
 app.post('/user/:id', ninja.profile_post_handler);
-app.post('/new', newQuote.newQuote_post_handler); 
+app.post('/new', newStory.newStory_post_handler); 
 
 //error_handling
 app.get('/success', ninja.success);
@@ -87,5 +87,5 @@ app.get('/failure', ninja.failure);
    
    
 http.createServer(app).listen(app.get('port'), function(){
-  console.log("Ninjamine server listening on port " + app.get('port'));
+  console.log("crowdhub server listening on port " + app.get('port'));
 });

@@ -2,7 +2,7 @@ doctype 5
 html
 	head
 		title= title
-		link(rel="shortcut icon", href="/images/theninjastar.png")
+		link(rel="shortcut icon", href="/images/crowdhub_icon.png")
 		link(rel='stylesheet', href='/stylesheets/main.css')
 		link(rel='stylesheet', href='/stylesheets/nav.css')
 		link(rel='stylesheet', href='/stylesheets/wrapper.css')
@@ -13,7 +13,7 @@ html
 			ol
 				a(href="/")#li_logo
 					li
-						img(src='/images/ninjastar.png', height=60, width=220)
+						img(src='/images/crowdhub_logo.png', height=70, width=240)
 				
 				if(typeof username !== 'undefined')
 					li
@@ -23,14 +23,14 @@ html
 						a(href="/users") Profile
 					
 				li
-					a(href="/quotes") Quotes
+					a(href="/stories") Stories
 				li	
 					a(href="/signup") Sign Up
 				li#search 
 					form(method="get", action="/search_results") 
 						input(type="text", id="searchBox", name="query", placeholder="Search a user")
-				li#newQuote
-					a(href="/new") New Quote
+				li#newStory
+					a(href="/new") New Story
 		#nav2
 			ol
 				include userbar
@@ -53,17 +53,17 @@ html
 						#recent_items
 							h1 Recent Quotes
 								p
-									| : No recent Quotes.
+									| : No recent Stories.
 				br
 		#footer
 			#footer_content
-				div(style="padding: 5px;") Copyright &copy; NinjaMine #{+new Date().getFullYear()} 
+				div(style="padding: 5px;") Copyright &copy; crowdhub #{+new Date().getFullYear()} 
 				#footer_links
 					a(href='/page?name=about') About 
 					| |  
 					a(href='/page?name=contact') Contact Us 
 					| |  
-					a(href='https://github.com/jawerty/ninjamine') GitHub 
+					a(href='https://github.com/jawerty/crowdhub') GitHub 
 					| | 
 					a(href='/page?name=blog') Blog 
 					br

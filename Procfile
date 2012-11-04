@@ -1,1 +1,1 @@
-web: node ninjamine.js
+web: node crowdhub.js

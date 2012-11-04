@@ -7,7 +7,7 @@ var failure1, failure2;
 var eight_char = "12345678";
 var twenty_six_char = "12345678912345678912345678";
 exports.form = function(req, res) {
-	res.render('signup', {title: 'NinjaMine | Sign Up'});
+	res.render('signup', {title: 'crowdhub | Sign Up'});
 };
 exports.form_post_handler = function(req, res) {
 	firstName = req.body.textFirstName;
@@ -94,8 +94,8 @@ exports.form_post_handler = function(req, res) {
 
 };
 exports.signupSuccess = function(req, res){
-	res.render('signupSuccess', {title: 'NinjaMine | Successful Signup'});
+	res.render('signupSuccess', {title: 'crowdhub | Successful Signup'});
 };
 exports.signupFailure = function(req, res){
-	res.render('signupFailure', {title: 'NinjaMine | Failed Signup', failure1:failure1, failure2:failure2});
+	res.render('signupFailure', {title: 'crowdhub | Failed Signup', failure1:failure1, failure2:failure2});
 };

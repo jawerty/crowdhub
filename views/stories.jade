@@ -1,0 +1,11 @@
+extends layout
+block mainContent
+	#display
+		h1 Top Stories
+		#story-display
+			-for (var id in stories)
+				- var story = stories[id]
+				div
+					halfStory = story.story.substring(0,15) + '...'
+					a(href='/story/#{id}') #{story.author} - #{halfStory}
+        
