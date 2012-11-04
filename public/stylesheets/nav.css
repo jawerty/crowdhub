@@ -86,7 +86,7 @@ box-shadow: inset 3px 3px 3px 3px #eee;
   width: 100%;
   height: 40px;
 
-  
+  border-bottom: 1px solid #B0B0B0; 
 }
 #nav2 ol {
   padding: 0px;
